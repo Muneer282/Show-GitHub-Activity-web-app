@@ -43,6 +43,6 @@ github-profile-viewer/
 ```
 
 ## 📸 Screenshots
-![UI project](GitHub-Activity-Viewer.png) 
+![UI project](./GitHub-Activity-Viewer.png) 
 
 
