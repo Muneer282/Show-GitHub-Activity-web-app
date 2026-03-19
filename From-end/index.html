@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Profile Viewer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+
+  <div class="bg-gray-800 p-8 rounded-2xl shadow-xl w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-6 text-center">GitHub Viewer 🚀</h1>
+
+    <input
+      id="username"
+      type="text"
+      placeholder="Enter GitHub username"
+      class="w-full p-3 rounded-lg bg-gray-700 focus:outline-none mb-4"
+    />
+
+    <button
+      onclick="fetchUser()"
+      class="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded-lg font-semibold"
+    >
+      Search
+    </button>
+
+    <div id="result" class="mt-6 hidden">
+      <img id="avatar" class="w-24 h-24 rounded-full mx-auto mb-4" />
+      <h2 id="name" class="text-xl text-center font-bold"></h2>
+      <p id="bio" class="text-center text-gray-400"></p>
+
+      <div class="flex justify-around mt-4">
+        <div>
+          <p class="text-center font-bold" id="repos"></p>
+          <p class="text-sm">Repos</p>
+        </div>
+        <div>
+          <p class="text-center font-bold" id="followers"></p>
+          <p class="text-sm">Followers</p>
+        </div>
+        <div>
+          <p class="text-center font-bold" id="following"></p>
+          <p class="text-sm">Following</p>
+        </div>
+      </div>
+
+      <a id="profile_link" target="_blank" class="block text-center mt-4 text-blue-400">
+        View Profile
+      </a>
+    </div>
+
+    <p id="error" class="text-red-400 text-center mt-4"></p>
+  </div>
+
+<script>
+async function fetchUser() {
+  const username = document.getElementById("username").value;
+  const resultDiv = document.getElementById("result");
+  const errorDiv = document.getElementById("error");
+
+  resultDiv.classList.add("hidden");
+  errorDiv.innerText = "";
+
+  try {
+    const response = await fetch(`http://127.0.0.1:8000/github/${username}`);
+    const data = await response.json();
+
+    if (data.error) {
+      errorDiv.innerText = data.error;
+      return;
+    }
+
+    document.getElementById("avatar").src = data.avatar;
+    document.getElementById("name").innerText = data.name || data.username;
+    document.getElementById("bio").innerText = data.bio || "No bio";
+    document.getElementById("repos").innerText = data.repos;
+    document.getElementById("followers").innerText = data.followers;
+    document.getElementById("following").innerText = data.following;
+    document.getElementById("profile_link").href = data.profile_url;
+
+    resultDiv.classList.remove("hidden");
+  } catch (err) {
+    errorDiv.innerText = "Something went wrong";
+  }
+}
+</script>
+
+</body>
+</html>
