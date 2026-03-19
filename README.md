@@ -18,3 +18,29 @@ The GitHub Profile Viewer is a web application that allows users to view GitHub 
   + JavaScript: A programming language for building dynamic and interactive web applications.
 * **Dependencies**:
   + pyproject.toml: A file used to manage the project's dependencies and configuration.
+ 
+
+### Setup Instructions
+1. Clone the repository: 
+2. Install The following dependencies: `pip install fastapi uvicorn httpx` and `uvicorn main:app --reload`
+3. Start the backend API: `fastapi dev`
+
+
+## 💻 Usage
+1. Open `index.html` file directly from browser
+2. Enter a GitHub username in the input field and click the "Fetch User" button
+3. The application will fetch the user's data from the GitHub API and display it on the page
+
+
+## 📂 Project Structure
+```markdown
+github-profile-viewer/
+├── main.py
+├── pyproject.toml
+├── frontend/
+│   ├── index.html
+└── README.md
+```
+
+## 📸 Screenshots
+
