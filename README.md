@@ -44,6 +44,6 @@ github-profile-viewer/
 
 ## 📸 Screenshots
 
-![UI project](Image.jpg)
+![UI project](GitHub-Activity-Viewer.png)
 
 
