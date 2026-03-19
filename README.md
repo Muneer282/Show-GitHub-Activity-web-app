@@ -43,6 +43,53 @@ github-profile-viewer/
 ```
 
 ## 📸 Screenshots
-![alt text](https://github.com/Muneer282/Show-GitHub-Activity-web-app/blob/master/GitHub-Activity-Viewer.png?raw=true)
+
+
+
+
+![UI project](GitHub-Activity-Viewer.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
