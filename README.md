@@ -43,6 +43,6 @@ github-profile-viewer/
 ```
 
 ## 📸 Screenshots
-![UI project](From-end/GitHub-Activity-Viewer.png)
+![alt text](https://github.com/Muneer282/Show-GitHub-Activity-web-app/blob/master/GitHub-Activity-Viewer.png?raw=true)
 
 
