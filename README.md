@@ -44,3 +44,29 @@ github-profile-viewer/
 
 ## 📸 Screenshots
 
+
+
+![UI project](GitHub-Activity-Viewer.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
